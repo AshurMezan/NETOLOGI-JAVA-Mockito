@@ -214,55 +214,55 @@ class MovieManagerTest {
     void shouldFindLastNullMoviesDefaultCount() {
         MovieData[] expected = moviesExpectedFindLast0DefaultCount;
         manager.setMovies(moviesTestList0);
-        manager.findLast();
-        assertArrayEquals(expected, manager.getMoviesReverse());
+        manager.findLast(0);
+        assertArrayEquals(expected, manager.getMovies());
     }
 
     @Test
     void shouldFindLastOneMoviesDefaultCount() {
         MovieData[] expected = moviesExpectedFindLast1DefaultCount;
         manager.setMovies(moviesTestList1);
-        manager.findLast();
-        assertArrayEquals(expected, manager.getMoviesReverse());
+        manager.findLast(1);
+        assertArrayEquals(expected, manager.getMovies());
     }
 
     @Test
     void shouldFindLastFiveMoviesDefaultCount() {
         MovieData[] expected = moviesExpectedFindLast5DefaultCount;
         manager.setMovies(moviesTestList5);
-        manager.findLast();
-        assertArrayEquals(expected, manager.getMoviesReverse());
+        manager.findLast(5);
+        assertArrayEquals(expected, manager.getMovies());
     }
 
     @Test
     void shouldFindLastFifteenMoviesDefaultCount() {
         MovieData[] expected = moviesExpectedFindLast15DefaultCount;
         manager.setMovies(moviesTestList15);
-        manager.findLast();
-        assertArrayEquals(expected, manager.getMoviesReverse());
+        manager.findLast(15);
+        assertArrayEquals(expected, manager.getMovies());
     }
 
     @Test
     void shouldFindLastFifteenMoviesCountNull() {
         MovieData[] expected = moviesExpectedFindLast15Count0;
         managerCountNull.setMovies(moviesTestList15);
-        managerCountNull.findLast();
-        assertArrayEquals(expected, managerCountNull.getMoviesReverse());
+        managerCountNull.findLast(15);
+        assertArrayEquals(expected, managerCountNull.getMovies());
     }
 
     @Test
     void shouldFindLastFiveMoviesCountSeven() {
         MovieData[] expected = moviesExpectedFindLast5Count7;
         managerCountSeven.setMovies(moviesTestList5);
-        managerCountSeven.findLast();
-        assertArrayEquals(expected, managerCountSeven.getMoviesReverse());
+        managerCountSeven.findLast(5);
+        assertArrayEquals(expected, managerCountSeven.getMovies());
     }
 
     @Test
     void shouldFindLastFifteenMoviesCountSeven() {
         MovieData[] expected = moviesExpectedFindLast15Count7;
         managerCountSeven.setMovies(moviesTestList15);
-        managerCountSeven.findLast();
-        assertArrayEquals(expected, managerCountSeven.getMoviesReverse());
+        managerCountSeven.findLast(15);
+        assertArrayEquals(expected, managerCountSeven.getMovies());
     }
 }
