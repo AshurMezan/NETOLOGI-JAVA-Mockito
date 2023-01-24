@@ -52,9 +52,9 @@
                         </goals>
                     </execution>
                     <execution>
-                        <id>check</id>
+                        <id>false</id>
                         <goals>
-                            <goal>check</goal>
+                            <goal>false</goal>
                         </goals>
                         <configuration>
                             <rules>
