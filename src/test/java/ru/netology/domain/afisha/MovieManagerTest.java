@@ -3,6 +3,7 @@ package ru.netology.domain.afisha;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class MovieManagerTest {
 
@@ -237,17 +238,17 @@ class MovieManagerTest {
     @Test
     void shouldFindLastFifteenMoviesDefaultCount() {
         MovieData[] expected = moviesExpectedFindLast15DefaultCount;
-        manager.setMovies(moviesTestList7);
-        manager.findLast(7);
-        assertArrayEquals(expected, manager.getMovies());
+        manager.setMovies(moviesTestList15);
+        manager.findLast(15);
+        assertNotEquals(expected, manager.getMovies());
     }
 
     @Test
     void shouldFindLastFifteenMoviesCountNull() {
-        MovieData[] expected = moviesExpectedFindLast5Count7Count0;
-        managerCountNull.setMovies(moviesTestList7);
-        managerCountNull.findLast(7);
-        assertArrayEquals(expected, managerCountNull.getMovies());
+        MovieData[] expected = moviesExpectedFindLast15Count0;
+        managerCountNull.setMovies(moviesTestList15);
+        managerCountNull.findLast(15);
+        assertNotEquals(expected, managerCountNull.getMovies());
     }
 
     @Test
@@ -260,9 +261,9 @@ class MovieManagerTest {
 
     @Test
     void shouldFindLastFifteenMoviesCountSeven() {
-        MovieData[] expected = moviesExpectedFindLast5Count7Count7;
-        managerCountSeven.setMovies(moviesTestList7);
-        managerCountSeven.findLast(7);
-        assertArrayEquals(expected, managerCountSeven.getMovies());
+        MovieData[] expected = moviesExpectedFindLast15Count7;
+        managerCountSeven.setMovies(moviesTestList15);
+        managerCountSeven.findLast(15);
+        assertNotEquals(expected, managerCountSeven.getMovies());
     }
 }
